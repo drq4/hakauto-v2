@@ -33,6 +33,8 @@ Footage production, prompts, status and the facts to verify are documented in `p
 
 ## Hosting (GitHub Pages)
 
+Live draft: https://drq4.github.io/hakauto-v2/
+
 Every push to `main` publishes the `site/` folder with `.github/workflows/pages.yml`.
 One-time setup: repository **Settings → Pages → Source: GitHub Actions**.
 
