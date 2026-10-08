@@ -1,0 +1,12 @@
+{
+  "version": "mockup-1",
+  "placeholder": true,
+  "label": "Maquette \u2014 animatic \u00e0 partir de vos photos r\u00e9elles",
+  "count": 337,
+  "fps": 8,
+  "width": 1280,
+  "height": 720,
+  "pattern": "frames/frame-%04d.webp",
+  "start": 0,
+  "poster": "poster.webp"
+}

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HAK AUTO — Voitures d’occasion, atelier & location à Lendelede</title>
+  <meta name="description" content="HAK AUTO, Spoelewielenlaan 10, 8860 Lendelede. Achat et vente de voitures d’occasion, entretien, pré-contrôle technique, diagnostic, airco, pneus et location d’utilitaires. Depuis 2021, plus de 3 500 véhicules vendus.">
+  <meta name="theme-color" content="#0B0D10">
+  <!-- DRAFT: remove this line (and update robots.txt) at launch -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/brand/hakauto-logo-white.webp">
+  <link rel="preload" as="image" href="media/flight/poster.webp">
+  <link rel="stylesheet" href="styles.css?v=20261008d">
+  <link rel="stylesheet" href="components.css?v=20261008d">
+  <!-- Language is decided before first paint (?lang= > saved choice > French) -->
+  <script src="js/i18n.js?v=20261008a"></script>
+</head>
+<body>
+  <!-- Icon sprite (simple line icons drawn for this site) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11 11 0 0 0 5.2 5.2l1.4-2.1 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 3.5v11.2a3.8 3.8 0 1 1-3.8-3.8M14 3.5c.4 2.6 2.4 4.5 5 4.7"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.6 6.6a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8" cy="8" r="1.6"/></g></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.2-4A8.5 8.5 0 1 1 8.4 19z"/><path d="M9 8.5c0 3 2.5 6.5 6.5 6.5l1-1.6-2-1-1 .9c-1-.4-2.3-1.7-2.7-2.7l.9-1-1-2z"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></g></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  </svg>
+
+  <!-- Branded intro (max 3 s). Decorative: the page underneath stays in the accessibility tree. -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <div class="intro__logo"><img src="assets/brand/hakauto-logo-white.webp" alt="" width="831" height="258"><span class="intro__shine"></span></div>
+      <p class="intro__tag"><span data-i18n="intro.tag1">Voitures · Mécanique</span><span class="intro__sep"> · </span><span data-i18n="intro.tag2">Entretien · Pneus</span></p>
+      <div class="intro__bar"><span></span></div>
+      <p class="intro__place" data-i18n="intro.place">Lendelede · depuis 2021</p>
+    </div>
+  </div>
+  <script>
+    // Translate the intro before it paints (main.js handles the rest of the page).
+    document.querySelectorAll("#intro [data-i18n]").forEach(function (el) { el.textContent = HAK_I18N.t(el.dataset.i18n); });
+  </script>
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Aller au contenu</a>
+
+  <!-- Header lives outside the pinned flight so it persists the whole way down -->
+  <header class="site-header" data-state="glass">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" data-i18n-attr="aria-label:a11y.home" aria-label="HAK AUTO — accueil">
+        <img src="assets/brand/hakauto-logo-white.png" alt="HAK AUTO" width="831" height="258">
+      </a>
+      <nav class="primary-nav" data-i18n-attr="aria-label:a11y.nav" aria-label="Navigation principale">
+        <ul id="nav-list"></ul>
+      </nav>
+      <div class="header-actions">
+        <div class="header-social" data-i18n-attr="aria-label:a11y.social" role="group" aria-label="HAK AUTO sur les réseaux">
+          <a class="pill-2m" data-social="secondhand" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tag"/></svg><span>2ememain</span></a>
+          <a class="icon-link" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a class="icon-link" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a>
+        </div>
+        <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.lang" aria-label="Langue"></div>
+        <a class="btn btn--primary btn--sm header-book" href="#atelier" data-i18n="header.book">Rendez-vous</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-i18n-attr="aria-label:a11y.menuOpen" aria-label="Ouvrir le menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" data-i18n-attr="aria-label:a11y.menu" aria-label="Menu" hidden>
+    <div class="mobile-menu__panel">
+      <img class="mobile-menu__logo" src="assets/brand/hakauto-logo-white-sm.webp" alt="HAK AUTO" width="415" height="129">
+      <button class="mobile-menu__close" type="button" data-i18n-attr="aria-label:a11y.menuClose" aria-label="Fermer le menu"><span></span><span></span></button>
+      <div class="lang-switch lang-switch--menu" role="group" data-i18n-attr="aria-label:a11y.lang" aria-label="Langue"></div>
+      <ul class="mobile-menu__list" id="mobile-nav-list"></ul>
+      <div class="social-row social-row--menu"></div>
+      <div class="mobile-menu__foot">
+        <a class="btn btn--primary btn--block" href="#atelier" data-close data-i18n="menu.book">Prendre rendez-vous</a>
+        <a class="btn btn--ghost btn--block" data-href="tel" data-close><svg class="btn__icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-text="phone"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Always-visible call button -->
+  <a class="call-fab" data-href="tel" data-i18n-attr="aria-label:a11y.call" aria-label="Appeler HAK AUTO au 0496 30 40 96">
+    <svg aria-hidden="true"><use href="#i-phone"/></svg><span class="call-fab__num" data-text="phone" aria-hidden="true"></span>
+  </a>
+
+  <main id="top">
+    <!-- ================= FLY-THROUGH ================= -->
+    <section class="flight" id="flight" data-i18n-attr="aria-label:flight.aria" aria-label="Visite du garage HAK AUTO">
+      <div class="flight__stage">
+        <picture>
+          <source media="(max-width: 760px)" srcset="media/flight/poster-portrait.webp">
+          <img class="flight__poster" src="media/flight/poster.webp" alt="" aria-hidden="true">
+        </picture>
+        <canvas class="flight__canvas" aria-hidden="true"></canvas>
+        <div class="flight__shade" aria-hidden="true"></div>
+        <div class="flight__chapters" id="flight-chapters"></div>
+        <div class="flight__hud" aria-hidden="true">
+          <div class="flight__progress"><span></span></div>
+          <ol class="flight__steps" id="flight-steps"></ol>
+        </div>
+        <a class="flight__skip" href="#main-content"><span data-i18n="flight.skip">Passer la visite</span> <span aria-hidden="true">↓</span></a>
+        <div class="flight__cue" aria-hidden="true"><span></span><b data-i18n="flight.cue">Faites défiler</b></div>
+        <div class="flight__badge" hidden>Aperçu — fly-through en production</div>
+      </div>
+    </section>
+
+    <!-- Reduced-motion / constrained fallback: chapters over representative stills -->
+    <section class="flight-static" id="flight-static" data-i18n-attr="aria-label:flight.aria" aria-label="Visite du garage HAK AUTO" hidden></section>
+
+    <div id="main-content" tabindex="-1"></div>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats" data-i18n-attr="aria-label:stats.aria" aria-label="HAK AUTO en chiffres">
+      <div class="container stats__grid" id="stats"></div>
+    </section>
+
+    <!-- ================= STOCK ================= -->
+    <section class="section stock" id="vehicules" aria-labelledby="stock-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="stock.eyebrow">Showroom</p>
+          <h2 id="stock-title" data-i18n="stock.title">Nos véhicules d’occasion</h2>
+          <p class="section-head__lead" data-i18n="stock.lead"></p>
+        </div>
+
+        <!-- 2ememain: where almost all sales happen -> most prominent call to action of the section -->
+        <aside class="m2-band" aria-labelledby="m2-title">
+          <div class="m2-band__icon" aria-hidden="true"><svg><use href="#i-tag"/></svg></div>
+          <div class="m2-band__copy">
+            <p class="m2-band__eyebrow" data-i18n="m2.eyebrow"></p>
+            <h3 id="m2-title" data-i18n="m2.title"></h3>
+            <p data-i18n="m2.text"></p>
+          </div>
+          <a class="btn btn--primary m2-band__cta" data-social="secondhand" target="_blank" rel="noopener"><span data-i18n="m2.cta"></span><svg class="btn__icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        </aside>
+
+        <form class="stock-filters" id="stock-filters" data-i18n-attr="aria-label:stock.filtersAria" aria-label="Filtrer les véhicules">
+          <div class="field">
+            <label for="f-make" data-i18n="stock.make">Marque</label>
+            <select id="f-make" name="make"><option value="" data-i18n="stock.all">Toutes</option></select>
+          </div>
+          <div class="field">
+            <label for="f-price"><span data-i18n="stock.budget">Budget max</span> <output id="f-price-out" for="f-price"></output></label>
+            <input type="range" id="f-price" name="price" min="2000" max="50000" step="500">
+          </div>
+          <div class="field">
+            <label for="f-sort" data-i18n="stock.sort">Trier par</label>
+            <select id="f-sort" name="sort">
+              <option value="recent" data-i18n="sort.recent">Arrivages récents</option>
+              <option value="price-asc" data-i18n="sort.priceAsc">Prix croissant</option>
+              <option value="price-desc" data-i18n="sort.priceDesc">Prix décroissant</option>
+              <option value="km-asc" data-i18n="sort.km">Kilométrage</option>
+              <option value="year-desc" data-i18n="sort.year">Année</option>
+            </select>
+          </div>
+          <div class="chips" role="radiogroup" data-i18n-attr="aria-label:stock.kindAria" aria-label="Carburant et type">
+            <label class="chip"><input type="radio" name="kind" value="" checked><span data-i18n="kind.all">Tous</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Essence"><span data-i18n="kind.petrol">Essence</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Diesel"><span data-i18n="kind.diesel">Diesel</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Hybride"><span data-i18n="kind.hybrid">Hybride</span></label>
+            <label class="chip"><input type="radio" name="kind" value="auto"><span data-i18n="kind.auto">Automatique</span></label>
+            <label class="chip"><input type="radio" name="kind" value="utility"><span data-i18n="kind.utility">Utilitaires</span></label>
+          </div>
+        </form>
+
+        <p class="stock-count" id="stock-count" aria-live="polite"></p>
+        <ul class="stock-grid" id="stock-grid"></ul>
+        <div class="stock-more">
+          <button class="btn btn--ghost-dark" type="button" id="stock-more" data-i18n="stock.more">Afficher plus</button>
+          <a class="link-2m" data-social="secondhand" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tag"/></svg><span data-i18n="stock.allOn2m"></span><svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ATELIER ================= -->
+    <section class="section atelier" id="atelier" aria-labelledby="atelier-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--light" data-i18n="atelier.eyebrow">Atelier</p>
+            <h2 id="atelier-title" data-i18n="atelier.title"></h2>
+          </div>
+          <p class="section-head__lead" data-i18n="atelier.lead"></p>
+        </div>
+        <ul class="service-grid" id="service-grid"></ul>
+
+        <div class="booking" id="rendez-vous">
+          <div class="booking__intro">
+            <img src="assets/brand/icon-atelier.png" alt="" class="booking__icon" width="300" height="300">
+            <h3 data-i18n="booking.title"></h3>
+            <p data-i18n="booking.text"></p>
+            <p class="booking__alt"><span data-i18n="booking.alt"></span> <a data-href="tel"><span data-text="phone"></span></a></p>
+          </div>
+          <form class="form" id="booking-form" novalidate data-kind="booking">
+            <div class="form__row">
+              <div class="field"><label for="b-name" data-i18n="form.name"></label><input id="b-name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="b-phone" data-i18n="form.phone"></label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            </div>
+            <div class="form__row">
+              <div class="field"><label for="b-service" data-i18n="form.service"></label><select id="b-service" name="service" required></select></div>
+              <div class="field"><label for="b-car" data-i18n="form.car"></label><input id="b-car" name="car" data-i18n-attr="placeholder:form.carPh"></div>
+            </div>
+            <div class="form__row">
+              <div class="field"><label for="b-date" data-i18n="form.date"></label><input id="b-date" name="date" type="date"></div>
+              <div class="field"><label for="b-slot" data-i18n="form.slot"></label>
+                <select id="b-slot" name="slot"><option value="morning" data-i18n="slot.morning"></option><option value="afternoon" data-i18n="slot.afternoon"></option><option value="any" data-i18n="slot.any"></option></select></div>
+            </div>
+            <div class="field"><label for="b-msg" data-i18n="form.message"></label><textarea id="b-msg" name="message" rows="3" data-i18n-attr="placeholder:form.messagePh"></textarea></div>
+            <div class="channel" role="radiogroup" aria-labelledby="b-via">
+              <span class="channel__label" id="b-via" data-i18n="form.via"></span>
+              <label class="channel__opt"><input type="radio" name="channel" value="whatsapp" checked><span><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><b data-i18n="form.viaWa"></b></span></label>
+              <label class="channel__opt"><input type="radio" name="channel" value="email"><span><svg aria-hidden="true"><use href="#i-mail"/></svg><b data-i18n="form.viaMail"></b><small class="channel__missing" data-i18n="form.mailMissing"></small></span></label>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit"></button>
+            <p class="form__note" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REPRISE ================= -->
+    <section class="section reprise" id="reprise" aria-labelledby="reprise-title">
+      <div class="container reprise__grid">
+        <div class="reprise__copy">
+          <p class="eyebrow" data-i18n="reprise.eyebrow"></p>
+          <h2 id="reprise-title" data-i18n="reprise.title"></h2>
+          <p class="section-head__lead" data-i18n="reprise.lead"></p>
+          <ol class="steps">
+            <li><span>1</span><div><strong data-i18n="step1.t"></strong><em data-i18n="step1.d"></em></div></li>
+            <li><span>2</span><div><strong data-i18n="step2.t"></strong><em data-i18n="step2.d"></em></div></li>
+            <li><span>3</span><div><strong data-i18n="step3.t"></strong><em data-i18n="step3.d"></em></div></li>
+          </ol>
+        </div>
+        <form class="form form--card" id="estimate-form" novalidate data-kind="estimate">
+          <h3 data-i18n="estimate.title"></h3>
+          <div class="form__row">
+            <div class="field"><label for="e-make" data-i18n="form.make"></label><input id="e-make" name="make" required></div>
+            <div class="field"><label for="e-model" data-i18n="form.model"></label><input id="e-model" name="model" required></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="e-year" data-i18n="form.year"></label><input id="e-year" name="year" inputmode="numeric" placeholder="2018"></div>
+            <div class="field"><label for="e-km" data-i18n="form.km"></label><input id="e-km" name="km" inputmode="numeric" placeholder="85 000"></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="e-fuel" data-i18n="form.fuel"></label>
+              <select id="e-fuel" name="fuel"><option value="petrol" data-i18n="fuelopt.petrol"></option><option value="diesel" data-i18n="fuelopt.diesel"></option><option value="hybrid" data-i18n="fuelopt.hybrid"></option><option value="electric" data-i18n="fuelopt.electric"></option><option value="other" data-i18n="fuelopt.other"></option></select></div>
+            <div class="field"><label for="e-state" data-i18n="form.state"></label>
+              <select id="e-state" name="state"><option value="vgood" data-i18n="state.vgood"></option><option value="good" data-i18n="state.good"></option><option value="repair" data-i18n="state.repair"></option><option value="broken" data-i18n="state.broken"></option></select></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="e-name" data-i18n="form.name"></label><input id="e-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="e-phone" data-i18n="form.phone"></label><input id="e-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          </div>
+          <div class="channel" role="radiogroup" aria-labelledby="e-via">
+            <span class="channel__label" id="e-via" data-i18n="form.via"></span>
+            <label class="channel__opt"><input type="radio" name="channel" value="whatsapp" checked><span><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><b data-i18n="form.viaWa"></b></span></label>
+            <label class="channel__opt"><input type="radio" name="channel" value="email"><span><svg aria-hidden="true"><use href="#i-mail"/></svg><b data-i18n="form.viaMail"></b><small class="channel__missing" data-i18n="form.mailMissing"></small></span></label>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit"></button>
+          <p class="form__note" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= BAND ================= -->
+    <section class="band" data-i18n-attr="aria-label:band.aria" aria-label="Nos métiers">
+      <img class="band__img" src="assets/img/flags-1400.webp" srcset="assets/img/flags-800.webp 800w, assets/img/flags-1400.webp 1400w" sizes="100vw" data-i18n-attr="alt:band.alt" alt="" loading="lazy">
+      <div class="band__copy container">
+        <p class="eyebrow eyebrow--light">Ankoop & Verkoop · Onderhoud & Herstelling · Car Rental</p>
+        <p class="band__title" data-i18n="band.title"></p>
+      </div>
+    </section>
+
+    <!-- ================= LOCATION ================= -->
+    <section class="section location" id="location" aria-labelledby="location-title">
+      <div class="container location__grid">
+        <figure class="location__media"><img id="rental-img" alt="" loading="lazy"></figure>
+        <div class="location__copy">
+          <p class="eyebrow" data-i18n="rental.eyebrow"></p>
+          <h2 id="location-title" data-i18n="rental.title"></h2>
+          <p class="section-head__lead" data-i18n="rental.lead"></p>
+          <div class="rental-card">
+            <div><p class="rental-card__kind" id="rental-kind"></p><p class="rental-card__title" id="rental-title"></p></div>
+            <div class="rental-card__price"><span id="rental-price"></span><small id="rental-note"></small></div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--primary" id="rental-wa" target="_blank" rel="noopener"><svg class="btn__icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span data-i18n="rental.wa"></span></a>
+            <a class="btn btn--ghost-dark" data-href="tel"><svg class="btn__icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="rental.call"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__copy">
+          <p class="eyebrow eyebrow--light" data-i18n="contact.eyebrow">Contact</p>
+          <h2 id="contact-title" data-i18n="contact.title"></h2>
+          <address class="contact__address">
+            <span data-text="name"></span><br>
+            <span data-text="street"></span><br>
+            <span data-text="city"></span>
+          </address>
+          <dl class="contact__lines">
+            <div><dt data-i18n="contact.phone"></dt><dd><a data-href="tel"><span data-text="phone"></span></a></dd></div>
+            <div><dt data-i18n="contact.wa"></dt><dd><a data-href="wa" target="_blank" rel="noopener" data-i18n="contact.waText"></a></dd></div>
+            <div class="contact__mail" hidden><dt data-i18n="contact.mail"></dt><dd><a data-href="mail" data-text="email"></a></dd></div>
+          </dl>
+          <div class="contact__social">
+            <h3 data-i18n="contact.social"></h3>
+            <div class="social-row social-row--contact"></div>
+          </div>
+          <div class="hours">
+            <h3 data-i18n="contact.hours"></h3>
+            <dl id="hours"></dl>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--primary" data-href="maps" target="_blank" rel="noopener" data-i18n="contact.route"></a>
+            <a class="btn btn--ghost" data-href="tel" data-i18n="contact.call"></a>
+          </div>
+        </div>
+        <div class="contact__map" id="contact-map">
+          <img src="assets/img/garage-1600.webp" srcset="assets/img/garage-960.webp 960w, assets/img/garage-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 55vw" data-i18n-attr="alt:map.alt" alt="" loading="lazy">
+          <div class="contact__map-card">
+            <p class="contact__map-addr"><span data-text="street"></span> · <span data-text="city"></span></p>
+            <div class="btn-row">
+              <button class="btn btn--primary" type="button" id="load-map" data-i18n="map.show"></button>
+              <a class="btn btn--glass" data-href="maps" target="_blank" rel="noopener" data-i18n="map.open"></a>
+            </div>
+            <p class="contact__map-note" data-i18n="map.note"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="assets/brand/hakauto-logo-full-white.png" alt="HAK AUTO" width="930" height="367" loading="lazy">
+        <div class="social-row social-row--footer"></div>
+      </div>
+      <nav data-i18n-attr="aria-label:a11y.footerNav" aria-label="Pied de page"><ul id="footer-nav"></ul></nav>
+      <div class="site-footer__contact">
+        <p><span data-text="street"></span>, <span data-text="city"></span></p>
+        <p><a data-href="tel"><span data-text="phone"></span></a></p>
+        <div class="lang-switch lang-switch--footer" role="group" data-i18n-attr="aria-label:a11y.lang" aria-label="Langue"></div>
+      </div>
+    </div>
+    <div class="container site-footer__legal">
+      <p>© <span id="year"></span> HAK AUTO. <span data-i18n="footer.rights"></span></p>
+      <p data-i18n="footer.legal"></p>
+    </div>
+  </footer>
+
+  <!-- Vehicle detail (native dialog: focus trap, Escape and inert background for free) -->
+  <dialog class="car-dialog" id="car-dialog" aria-labelledby="car-d-title">
+    <div class="car-dialog__inner">
+      <button class="car-dialog__close" type="button" autofocus data-i18n-attr="aria-label:car.close" aria-label="Fermer"><span></span><span></span></button>
+      <div class="car-dialog__gallery">
+        <img class="car-dialog__img" alt="">
+        <button class="car-dialog__nav car-dialog__nav--prev" type="button" data-i18n-attr="aria-label:car.prev" aria-label="Photo précédente"><svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <button class="car-dialog__nav car-dialog__nav--next" type="button" data-i18n-attr="aria-label:car.next" aria-label="Photo suivante"><svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <p class="car-dialog__count" aria-live="polite"></p>
+        <div class="car-dialog__thumbs"></div>
+      </div>
+      <div class="car-dialog__body">
+        <h2 id="car-d-title" class="car-dialog__title"></h2>
+        <p class="car-dialog__spec"></p>
+        <p class="car-dialog__price"></p>
+        <dl class="car-dialog__facts"></dl>
+        <div class="car-dialog__actions"></div>
+        <div class="car-dialog__more"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">HAK AUTO — Spoelewielenlaan 10, 8860 Lendelede — 0496 30 40 96</p></noscript>
+
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+  <script>window.HAK_ASSET_V = "20261008c";</script>
+  <script src="js/content.js?v=20261008c"></script>
+  <script src="js/stock.js?v=20261008c"></script>
+  <script src="js/flight.js?v=20261008c"></script>
+  <script src="js/main.js?v=20261008c"></script>
+</body>
+</html>

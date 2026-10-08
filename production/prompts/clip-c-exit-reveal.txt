@@ -1,0 +1,5 @@
+Continue the exact same single continuous first-person camera move from the last frame. No cuts. The camera itself is flying; nothing flying or hovering is ever visible in frame.
+0-2s: flies out through the open rear roller door into the rear yard, passing a parked white van, keeping forward momentum.
+2-4s: while still moving, yaws smoothly 180 degrees to face back at the building it just left: the open roller door in the rear wall of the long dark-anthracite building.
+4-10s: flies backwards and climbs steadily, revealing the whole premises exactly as in the reference image: the long dark building with the glass corner showroom at its far end, the paved forecourt with parked cars, the street running past with a few moving cars, neighbouring warehouses of a Belgian business park, trees and flat green fields beyond. Ends on a high, stable three-quarter aerial view.
+Architecture identical to the reference: same dark fascia band, same glass curtain wall at the corner. Every parked vehicle is stationary; nothing appears or disappears. No text added, no invented logos.

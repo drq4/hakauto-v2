@@ -1,0 +1,31 @@
+# --- Kept out of the repository (production material, local tooling) ---
+# Cloned reference prompts repo (has its own git history)
+_prompts/
+
+# Raw Higgsfield output, generated stills and inspection sheets
+production/clips/
+production/stills/
+production/jobs/
+production/archive/
+
+# Animatic working files (downloaded photos, fonts, renders)
+production/animatic/src/
+production/animatic/hi/
+production/animatic/shots/
+production/animatic/fonts/
+production/animatic/content.json
+production/animatic/curl.cfg
+production/animatic/urls.txt
+production/animatic/*.jpg
+
+# Original images downloaded from the client's website (+ a scratch preview)
+source-assets/
+_preview_image9.jpg
+
+# Local editor / assistant settings and OS junk
+.claude/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db

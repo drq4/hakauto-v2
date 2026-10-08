@@ -1,0 +1,4 @@
+# Draft site: keep it out of search engines until launch.
+# At launch, replace with:  User-agent: *  /  Allow: /
+User-agent: *
+Disallow: /

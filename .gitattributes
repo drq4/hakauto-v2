@@ -1,0 +1,6 @@
+# Keep text files with LF line endings (shell scripts must stay LF to run on Linux/macOS)
+* text=auto eol=lf
+*.webp binary
+*.png binary
+*.jpg binary
+*.mp4 binary
